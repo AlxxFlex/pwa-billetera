@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f6f7f9">
+    <meta name="description" content="Un lugar simple para tus gastos del día a día. Tu billetera personal, privada y disponible sin conexión.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Mi Billetera">
+    <title>Mi Billetera Lite · Tus gastos, en orden</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg">
+    <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M20 8V6a2 2 0 0 0-2-2H6a3 3 0 0 0 0 6h14v10H6a3 3 0 0 1-3-3V7"/><path d="M20 10h-5a3 3 0 0 0 0 6h5M16 13h.01"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9h-9zM16 3.9A9 9 0 0 1 20.1 8H16z"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v4h16v-4"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3M12 14v3"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 8.5a2.6 2.6 0 0 1 5 .7c0 2-2.5 2.3-2.5 4M12 17h.01"/></symbol>
+      <symbol id="i-food" viewBox="0 0 24 24"><path d="M5 3v6a3 3 0 0 0 6 0V3M8 3v18M19 21V3c-4 2-4 8 0 9"/></symbol>
+      <symbol id="i-transport" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="16" rx="4"/><path d="M5 10h14M8 19v2m8-2v2M9 15h.01M15 15h.01M9 6h6"/></symbol>
+      <symbol id="i-services" viewBox="0 0 24 24"><path d="m13 2-9 12h7l-1 8 10-12h-7z"/></symbol>
+      <symbol id="i-leisure" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9z"/></symbol>
+      <symbol id="i-other" viewBox="0 0 24 24"><path d="M20 13.5 13.5 20a2 2 0 0 1-2.8 0L3 12.3V3h9.3l7.7 7.7a2 2 0 0 1 0 2.8Z"/><circle cx="7.5" cy="7.5" r=".8"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7m4-7v7"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18M8 15h.01M12 15h.01M16 15h.01"/></symbol>
+    </svg>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+    <aside class="sidebar" aria-label="Barra lateral">
+      <a class="brand" href="./" aria-label="Mi Billetera Lite, inicio"><span class="brand-mark"><svg><use href="#i-wallet"/></svg></span><span>mi billetera<span class="lite-label">LITE</span></span></a>
+      <div class="nav-caption">TU ESPACIO</div>
+      <nav class="navigation" aria-label="Navegación principal">
+        <a href="#main" class="nav-item active" data-nav="main"><svg><use href="#i-grid"/></svg>Vista general</a>
+        <a href="#history" class="nav-item" data-nav="history"><svg><use href="#i-list"/></svg>Movimientos<span id="nav-count" class="nav-count">0</span></a>
+        <a href="#categories" class="nav-item" data-nav="categories"><svg><use href="#i-chart"/></svg>Categorías</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-note"><span class="privacy-icon"><svg><use href="#i-lock"/></svg></span><strong>Solo tú y tus gastos.</strong><p>Tu información se guarda en este dispositivo. Siempre contigo.</p></div>
+        <button class="sidebar-help" type="button" data-help><svg><use href="#i-help"/></svg>Cómo funciona<svg class="small-arrow"><use href="#i-arrow"/></svg></button>
+        <span class="sidebar-version">MI BILLETERA LITE <span>1.0</span></span>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span class="topbar-label">Un poco de orden. Mucha tranquilidad.</span><div class="topbar-actions"><span id="connection-status" class="connection-status"><span class="status-dot"></span><span id="connection-label">En línea</span></span><button class="button button-install" id="install-button" type="button"><svg><use href="#i-download"/></svg><span>Instalar app</span></button><button class="icon-button help-mobile" type="button" data-help aria-label="Cómo funciona"><svg><use href="#i-help"/></svg></button></div></header>
+      <main id="main" tabindex="-1">
+        <div class="page-heading"><div><div class="eyebrow" id="current-date">TU DÍA A DÍA</div><h1>Tus gastos, en orden<span>.</span></h1><p>Pequeños gastos. Un panorama más claro.</p></div><button type="button" id="export-button" class="button button-secondary" disabled><svg><use href="#i-download"/></svg>Exportar<span class="export-suffix"> gastos</span></button></div>
+        <section class="balance-card" aria-label="Resumen de gastos">
+          <div class="balance-main"><div class="balance-label"><span class="tiny-wallet"><svg><use href="#i-wallet"/></svg></span>Total registrado<span class="currency-tag">MXN</span></div><div class="balance-value" id="total-amount" aria-live="polite">$0<span>.00</span></div><div class="balance-foot"><span class="mini-dot"></span>Todos tus gastos, en un solo lugar</div></div>
+          <div class="balance-details"><div class="summary-item"><span class="summary-icon"><svg><use href="#i-calendar"/></svg></span><div><span class="summary-label">Este mes</span><strong id="month-total">$0.00</strong><span class="summary-note" id="month-caption">Sin gastos registrados</span></div></div><div class="summary-item"><span class="summary-icon"><svg><use href="#i-list"/></svg></span><div><span class="summary-label">Movimientos</span><strong id="expense-count">0</strong><span class="summary-note">Cada detalle cuenta</span></div></div></div>
+        </section>
+        <div id="update-banner" class="notice update-notice" hidden><span>Hay una nueva versión lista.</span><button type="button" id="update-button">Actualizar app <span aria-hidden="true">↗</span></button></div>
+        <div id="storage-error" class="notice error-notice" role="alert" hidden></div>
+        <div class="content-grid">
+          <section class="entry-panel" aria-labelledby="form-title"><div class="section-heading"><div><span class="section-kicker">UN NUEVO MOVIMIENTO</span><h2 id="form-title">Agregar gasto</h2></div><span class="plus-badge"><svg><use href="#i-plus"/></svg></span></div>
+            <form id="expense-form" novalidate><div class="form-field"><label for="concept">¿En qué gastaste?</label><input id="concept" name="concept" placeholder="Un café, el súper, un taxi…" maxlength="80" autocomplete="off" required aria-describedby="form-error"></div><div class="form-field"><label for="amount">Monto</label><div class="amount-input"><span aria-hidden="true">$</span><input id="amount" name="amount" type="text" inputmode="decimal" placeholder="0.00" autocomplete="off" required aria-describedby="form-error"><span class="amount-currency">MXN</span></div></div><div class="form-field"><label for="category">Categoría</label><div class="select-wrap"><select id="category" name="category" required><option value="" disabled selected>Elige una categoría</option><option>Comida</option><option>Transporte</option><option>Servicios</option><option>Ocio</option><option>Otros</option></select><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg></div></div><p id="form-error" class="field-error" role="alert" hidden></p><button class="button button-primary save-button" id="save-button" type="submit"><svg><use href="#i-plus"/></svg><span>Guardar gasto</span><kbd>↵</kbd></button><p class="form-footnote"><svg><use href="#i-lock"/></svg>Se guarda aquí, incluso sin internet.</p></form>
+          </section>
+          <section id="history" class="history-panel" aria-labelledby="history-title" tabindex="-1"><div class="section-heading"><div><span class="section-kicker">EL DÍA A DÍA</span><h2 id="history-title">Tus movimientos <span class="count-pill" id="history-count">0</span></h2></div><span class="order-label">Más recientes primero</span></div><div class="history-toolbar"><label class="search-box"><svg><use href="#i-search"/></svg><input type="search" id="search" placeholder="Buscar un gasto" aria-label="Buscar por concepto"></label><label class="filter-wrap"><span class="sr-only">Filtrar por categoría</span><select id="category-filter"><option value="all">Todas las categorías</option><option>Comida</option><option>Transporte</option><option>Servicios</option><option>Ocio</option><option>Otros</option></select><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m6 8 4 4 4-4"/></svg></label></div><div class="history-content" id="history-content"><div class="empty-state"><div class="empty-illustration"><div class="empty-ticket"><span></span><span></span><span></span><div class="empty-ticket-icon"><svg><use href="#i-wallet"/></svg></div></div><span class="empty-plus">+</span></div><h3>Todo empieza con un pequeño gasto.</h3><p>Agrega tu primer movimiento y empieza<br>a ver más claro tu día a día.</p><button class="text-button" type="button" id="first-expense">Registrar mi primer gasto <svg><use href="#i-arrow"/></svg></button></div></div><div class="history-footer"><span id="filtered-count">0 movimientos</span><span>Hecho para la vida real.</span></div></section>
+        </div>
+        <section id="categories" class="categories-section" aria-labelledby="categories-title" tabindex="-1"><div class="categories-heading"><div><span class="section-kicker">UNA MIRADA MÁS CLARA</span><h2 id="categories-title">¿A dónde va tu dinero?</h2></div><span class="categories-caption">Distribución de todos tus gastos</span></div><div class="category-grid" id="category-grid"></div></section>
+        <footer class="page-footer"><span><svg><use href="#i-check"/></svg><span id="offline-status" role="status">Preparando el modo sin conexión…</span></span><span>Menos ruido. Más claridad.</span></footer>
+      </main>
+    </div>
+    <dialog id="help-dialog" aria-labelledby="help-title"><button class="icon-button dialog-close" type="button" data-close-dialog aria-label="Cerrar"><svg><use href="#i-close"/></svg></button><span class="dialog-mark"><svg><use href="#i-wallet"/></svg></span><div class="eyebrow">MI BILLETERA LITE</div><h2 id="help-title">Tu día a día.<br>Un poco más simple.</h2><p>Registra un concepto, el monto y su categoría. Tu historial y el total se actualizan al instante.</p><div class="help-item"><svg><use href="#i-lock"/></svg><div><strong>Tus datos se quedan aquí</strong><p>Se guardan en este navegador y dispositivo. No se envían a un servidor. Exporta tus gastos para conservar una copia; borrar los datos del navegador elimina el historial.</p></div></div><div class="help-item"><svg><use href="#i-check"/></svg><div><strong>También sin conexión</strong><p>Abre la app una vez con internet y espera a que indique “Lista para usar sin conexión”. Después podrás abrirla y registrar gastos sin red.</p></div></div><button class="button button-primary dialog-done" type="button" data-close-dialog>Entendido</button></dialog>
+    <dialog id="install-dialog" aria-labelledby="install-title"><button class="icon-button dialog-close" type="button" data-close-dialog aria-label="Cerrar"><svg><use href="#i-close"/></svg></button><span class="dialog-mark"><svg><use href="#i-download"/></svg></span><div class="eyebrow">SIEMPRE A LA MANO</div><h2 id="install-title">Hazle un espacio<br>a tu billetera.</h2><p id="install-instructions">En Chrome o Edge, abre el menú del navegador y elige “Instalar Mi Billetera Lite” o “Instalar esta página como una aplicación”.</p><p class="install-note">La opción aparece cuando el navegador verifica la app. Necesitas HTTPS o localhost para instalarla.</p><button class="button button-primary dialog-done" type="button" data-close-dialog>Listo</button></dialog>
+    <dialog id="delete-dialog" aria-labelledby="delete-title"><div class="eyebrow">REVISAR MOVIMIENTO</div><h2 id="delete-title">¿Eliminar este gasto?</h2><p id="delete-description"></p><p>Se quitará del historial y del total.</p><div class="dialog-actions"><button class="button button-secondary" type="button" id="cancel-delete">Conservar</button><button class="button button-danger" type="button" id="confirm-delete">Eliminar gasto</button></div></dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden><svg><use href="#i-check"/></svg><span id="toast-text"></span></div>
+    <noscript><div class="noscript">Activa JavaScript para registrar y consultar tus gastos en este dispositivo.</div></noscript>
+  </body>
+</html>
