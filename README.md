@@ -2,6 +2,8 @@
 
 PWA para registrar gastos cotidianos, consultar el historial y conocer el total en pesos mexicanos. Interfaz adaptable a móvil y escritorio, con tipografía del sistema, colores neutros y recursos incluidos en el proyecto.
 
+Publicación HTTPS preparada con Sites: **https://mi-billetera-lite-alxxflex.angelheriberto87.chatgpt.site**. El acceso de Sites es privado para la cuenta propietaria. El repositorio conserva su privacidad; GitHub Pages requiere un plan que admita este repositorio privado.
+
 ## Ejecutar localmente
 
 Requiere Node.js 22 o posterior. No utiliza dependencias de ejecución ni servicios externos.

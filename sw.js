@@ -1,6 +1,6 @@
 /* Bump this version whenever an App Shell file changes for a new release. */
 const CACHE_PREFIX = 'mi-billetera-lite-';
-const CACHE_NAME = `${CACHE_PREFIX}v1`;
+const CACHE_NAME = `${CACHE_PREFIX}v2`;
 const APP_SHELL = [
   './',
   './index.html',
